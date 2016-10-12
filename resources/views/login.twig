@@ -15,7 +15,6 @@
                 {{ form_open({'method': 'post'}) }}
 
                 <div class="form-group credentials">
-
                     {% if setting_value('anomaly.module.users::login') == 'username' %}
                         {{ form_text("username", null, {'class': 'form-control', 'placeholder': 'Username'}) }}{{ icon('user') }}
                     {% else %}
