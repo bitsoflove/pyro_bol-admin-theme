@@ -1,6 +1,6 @@
 # bol-admin-theme
 
-Hergebruikbare zaken aanpassen hier
+Hergebruikbare zaken aanpassen in deze repositories en zo veel mogelijk werken met config variabelen 
 
 project specifieke:
 
