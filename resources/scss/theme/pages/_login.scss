@@ -9,8 +9,7 @@
     background-position: center center;
 
     .logo {
-        opacity: 0.6;
-        color: white;
+        color: $main-color;
         text-align: center;
         margin-bottom: 2em;
     }
@@ -26,9 +25,11 @@
 
             input {
                 color: $input-color-placeholder;
-                background: rgba(66, 66, 66, 0.3);
-                border-color: rgba(255, 255, 255, 0.2);
-
+                background-color: white;
+                margin-bottom: 10px;
+                &:active {
+                    outline: none;
+                }
                 &[type="email"] {
                     margin-bottom: 0;
                     border-bottom: none;

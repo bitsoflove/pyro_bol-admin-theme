@@ -23,7 +23,7 @@
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
-$purple: #61259e !default;
+$main-color: #61259e !default;
 $green: #24ce7b !default;
 $blue: #38b5e6 !default;
 $orange: #f48714 !default;
@@ -35,7 +35,7 @@ $gray-light: #818a91 !default;
 $gray-lighter: #eceeef !default;
 $gray-lightest: #f7f7f9 !default;
 
-$brand-primary: $purple;
+$brand-primary: $main-color;
 $brand-success: $green;
 $brand-info: $blue;
 $brand-warning: $orange;
