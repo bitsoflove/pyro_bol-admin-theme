@@ -2,18 +2,9 @@
 
     <ul>
         <li class="logo">
-            <a href="http://pyrocms.com" target="_blank">
-                {{ img('theme::img/logo-dark-transparent.png').heighten(20)|raw }}
+            <a href="https://bitsoflove.be/" target="_blank">
+                Made by Bits of Love
             </a>
-        </li>
-        <li class="copyright">
-            &copy; {{ 'now'|date('Y') }} PyroCMS, Inc
-        </li>
-        <li class="footprint">
-            {{ request_time() }} <span>|</span> {{ memory_usage() }}
-        </li>
-        <li class="version">
-            {{ config('streams::distribution.version') }}
         </li>
     </ul>
 
@@ -26,11 +17,6 @@
                     </option>
                 {% endfor %}
             </select>
-        </li>
-        <li class="help">
-            <a class="btn btn-danger btn-inverse btn-sm" href="http://pyrocms.com/docs" target="_blank" {#data-toggle="modal" data-target="#modal-help"#}>
-                {{ icon('question-circle') }} {{ trans('pyrocms.theme.pyrocms::control_panel.help') }}
-            </a>
         </li>
     </ul>
 
