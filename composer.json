@@ -1,0 +1,9 @@
+{
+    "name": "bitsoflove/admin-theme",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Bitsoflove\\AdminTheme\\": "src/"
+        }
+    }
+}
