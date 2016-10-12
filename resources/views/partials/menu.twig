@@ -29,10 +29,20 @@
             </div>
 
             <hr>
+            {% if config('bitsoflove.theme.admin::settings.menu.profile') %}
+                <a href="{{ url('admin/profile') }}" class="nav-item">{{ trans('bitsoflove.module.profile::addon.title') }}</a>
+                <br>
+            {% endif %}
 
-            <a href="{{ url('admin/preferences') }}" class="nav-item">{{ trans('anomaly.module.preferences::addon.title') }}</a>
-            <br>
-            <a href="{{ url('admin/settings') }}" class="nav-item">{{ trans('anomaly.module.settings::addon.title') }}</a>
+            {% if config('bitsoflove.theme.admin::settings.menu.preferences') %}
+                <a href="{{ url('admin/preferences') }}" class="nav-item">{{ trans('anomaly.module.preferences::addon.title') }}</a>
+                <br>
+            {% endif %}
+
+            {% if config('bitsoflove.theme.admin::settings.menu.settings') %}
+                <a href="{{ url('admin/settings') }}" class="nav-item">{{ trans('anomaly.module.settings::addon.title') }}</a>
+                <br>
+            {% endif %}
         </div>
     </li>
 
