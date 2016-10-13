@@ -34,12 +34,12 @@
                 <br>
             {% endif %}
 
-            {% if config('bitsoflove.theme.admin::settings.menu.preferences') %}
+            {% if config('bitsoflove.theme.admin::settings.menu.preferences') &&  user().hasPermission('anomaly.module.preferences::*') %}
                 <a href="{{ url('admin/preferences') }}" class="nav-item">{{ trans('anomaly.module.preferences::addon.title') }}</a>
                 <br>
             {% endif %}
 
-            {% if config('bitsoflove.theme.admin::settings.menu.settings') %}
+            {% if config('bitsoflove.theme.admin::settings.menu.settings') && user().hasPermission('anomaly.module.settings::*') %}
                 <a href="{{ url('admin/settings') }}" class="nav-item">{{ trans('anomaly.module.settings::addon.title') }}</a>
                 <br>
             {% endif %}
