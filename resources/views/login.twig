@@ -21,7 +21,8 @@
                     {% else %}
                         {{ form_email("email", null, {'class': 'form-control', 'placeholder': 'Email'}) }}{{ icon('envelope') }}
                     {% endif %}
-
+                </div>
+                <div class="form-group credentials">
                     {{ form_password('password', {'class': 'form-control', 'placeholder': 'Password'}) }}{{ icon('locked') }}
                 </div>
 
