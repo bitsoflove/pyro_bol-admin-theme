@@ -3,7 +3,7 @@
     float: right;
     list-style: none;
     display: inline-block;
-    margin: 4em 1.5em 0 0;
+    margin: 10px 1.5em 0 0;
 
     .btn {
         display: inline-block;
@@ -22,7 +22,7 @@
 
         .btn {
             display: block;
-            
+
             &:not(:first-of-type) {
             	margin-top: 1em;
             	margin-left: 0;
