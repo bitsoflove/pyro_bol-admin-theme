@@ -6,7 +6,7 @@ return [
     'secondary'              => '#ff0',
 
     // Colors
-    'purple'                 => '#61259e',
+    'main-color'             => '#61259e',
     'green'                  => '#24ce7b',
     'blue'                   => '#38b5e6',
     'orange'                 => '#f48714',
@@ -205,7 +205,7 @@ return [
     'zindex-navbar-sticky' => 1030,
     'zindex-modal-bg'      => 1140,
     'zindex-modal'         => 1150,
-    
+
     /*
     * // Navbar
     *
