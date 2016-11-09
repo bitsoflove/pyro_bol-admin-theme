@@ -21,6 +21,7 @@ return [
     'white'                  => '#ffffff',
 
     // Branding
+    'brand-primary'          => '#61259e',
     'brand-success'          => '#24ce7b',
     'brand-info'             => '#38b5e6',
     'brand-warning'          => '#f69630',
