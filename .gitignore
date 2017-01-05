@@ -1,1 +1,7 @@
-.idea/*
+# OS specific
+.DS_Store
+
+# IDE specific
+.idea
+
+# others

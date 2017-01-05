@@ -1,36 +1,32 @@
 <!doctype html>
-
 <html>
+    <head>
+        {% block metadata deferred %}
+        {% include "theme::partials/metadata" %}
+        {% endblock %}
+    </head>
 
-<head>
+    <body class="pushing">
+        <main id="main">
+            <div id="sidebar">
+                {% include "theme::partials/brand" %}
+                {% include "theme::partials/sidebar" %}
+            </div>
+            <div id="content">
+                {% include "theme::partials/navbar" %}
+                {% include "theme::partials/header" %}
 
-    {% include "theme::partials/metadata" %}
-    {% include "theme::partials/head-favicons" %}
-</head>
+                {% include "pyrocms.theme.pyrocms::partials/banner" %}
+                {% include "pyrocms.theme.pyrocms::partials/breadcrumbs" %}
+                <div class="container-fluid">
+                    {% include "pyrocms.theme.pyrocms::partials/messages" %}
+                </div>
+                {{ block('content') }}
+            </div>
+            {% include "theme::partials/footer" %}
+        </main>
 
-<body>
-
-{% include "theme::partials/push" %}
-{% include "theme::partials/brand" %}
-{% include "theme::partials/navbar" %}
-{% include "theme::partials/header" %}
-
-<main id="main">
-
-    {% include "theme::partials/banner" %}
-    {% include "theme::partials/breadcrumbs" %}
-
-    <div class="container-fluid">
-        {% include "theme::partials/messages" %}
-    </div>
-
-    {{ block('content') }}
-
-</main>
-
-{% include "theme::partials/footer" %}
-{% include "theme::partials/modals" %}
-{% include "theme::partials/js" %}
-
-</body>
+        {% include "pyrocms.theme.pyrocms::partials/modals" %}
+        {% include "pyrocms.theme.pyrocms::partials/js" %}
+    </body>
 </html>

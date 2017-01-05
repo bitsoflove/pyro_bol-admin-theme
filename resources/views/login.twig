@@ -4,13 +4,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-lg-offset-9 col-md-10 col-md-offset-7 col-sm-10 col-sm-offset-7">
-
-                <div class="logo">
-                    <h1>{{ config('bitsoflove.theme.admin::settings.application_name') }}</h1>
-                </div>
-
-                {% include "theme::partials/messages" %}
+            <div class="col-lg-24">
+                <h2 class="header">
+                   Login to your account
+                </h2>
+                {% include "pyrocms.theme.pyrocms::partials/messages" %}
 
                 {{ form_open({'method': 'post'}) }}
 
@@ -21,13 +19,12 @@
                     {% else %}
                         {{ form_email("email", null, {'class': 'form-control', 'placeholder': 'Email'}) }}{{ icon('envelope') }}
                     {% endif %}
-                </div>
-                <div class="form-group credentials">
+
                     {{ form_password('password', {'class': 'form-control', 'placeholder': 'Password'}) }}{{ icon('locked') }}
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" value="Login" class="btn btn-primary btn-block">
+                    <button type="submit" value="Login" class="btn btn-success btn-block">
                         {{ trans('anomaly.module.users::button.login') }}
                     </button>
                 </div>

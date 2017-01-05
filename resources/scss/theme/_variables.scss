@@ -20,22 +20,28 @@
 //
 // Variable format should follow the `$component-modifier-state-property` order.
 
+//
+//
+// Offical PyroCMS Theme Variables
+//
+//
+
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
-$main-color: #61259e !default;
-$green: #24ce7b !default;
-$blue: #38b5e6 !default;
-$orange: #f48714 !default;
-$red: #f6303e !default;
+$black: #000;
+$green: #24ce7b;
+$blue: #38b5e6;
+$orange: #f48714;
+$red: #f6303e;
 
-$gray-dark: #353535 !default;
-$gray: #3e3e3e !default;
-$gray-light: #818a91 !default;
-$gray-lighter: #eceeef !default;
-$gray-lightest: #f7f7f9 !default;
+$gray-dark: #353535;
+$gray: #3e3e3e;
+$gray-light: #818a91;
+$gray-lighter: #eceeef;
+$gray-lightest: #f7f7f9;
 
-$brand-primary: $main-color;
+$brand-primary: #ec6467;
 $brand-success: $green;
 $brand-info: $blue;
 $brand-warning: $orange;
@@ -139,7 +145,7 @@ $grid-gutter-width: 1.875rem !default; // 30px
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-serif: Georgia, 'Times New Roman', Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace !default;
 $font-family-base: $font-family-sans-serif !default;
@@ -636,3 +642,74 @@ $pre-bg: #f7f7f9 !default;
 $pre-color: $gray-dark !default;
 $pre-border-color: #ccc !default;
 $pre-scrollable-max-height: 340px !default;
+
+
+//
+//
+
+// PyroCMS Theme Plus Variables
+//
+//
+
+/* control variables */
+$show-navbar: true !default;
+
+/* pyrocms | bootstrap variables */
+$border-radius: 0 !default;
+
+/* brand variables */
+$brand-bg: $brand-primary !default;
+$brand-height: 64px !default;
+$brand-logo-color: #fff !default;
+$brand-logo-opacity: 0.3 !default;
+$brand-logo-height: 40px !default;
+$brand-mobile-height: 48px !default;
+$brand-logo-mobile-height: 20px !default;
+$brand-logo-mobile-margin: 12px 0 0 0 !default;
+
+/* header variables */
+$header-height: 110px !default;
+$header-bg: transparent !default;
+
+/* toggle button variables */
+$toggle-text-color: rgba(0, 0, 0, 0.3) !default;
+$toggle-bg: $brand-primary !default;
+$toggle-hover-text-color: $white !default;
+$toggle-hover-text-opacity: 0.3 !default;
+
+/* navbar variables */
+$nav-bg: $gray-dark !default;
+$nav-height: 64px !default;
+$nav-mobile-height: 48px !default;
+
+/* menu variables */
+$menu-text-color: $gray-lighter !default;
+$menu-dropdown-bg: $white !default;
+
+/* sidebar variables */
+$sidebar-width: 300px !default;
+$sidebar-bg: $gray-dark !default;
+$sidebar-icon-color: $gray-light !default;
+$sidebar-icon-font-size: 150% !default;
+$sidebar-text-color: $gray-light !default;
+$sidebar-text-indent: 20px !default;
+$sidebar-icon-padding: 0 30px 0 0 !default;
+$sidebar-tree-color: $gray-light !default;
+$sidebar-icon-float: none !default;
+$sidebar-active-bg: lighten($sidebar-bg, 4%) !default;
+$sidebar-active-text-color: $white !default;
+$sidebar-sub-active-text-color: $white !default;
+
+/* login page variables */
+$login-bg-color: $gray-lightest !default;
+$login-text-color: rgba(255, 255, 255, 0.4) !default;
+$login-border-color: rgba(0, 0, 0, 0.4) !default;
+
+/* footer variables */
+$footer-bg: darken($gray-lighter, 4%) !default;
+$footer-logo-color: $gray-light !default;
+
+/* card variables */
+$card-border: none !default;
+$card-shadow: 5px 5px 0 rgba(66, 66, 66, 0.1) !default;
+$card-affix-bg: $white !default;
