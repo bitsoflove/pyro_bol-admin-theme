@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title'       => 'BOL Admin',
-    'name'        => 'BOL Admin Theme',
-    'description' => 'The BOL admin theme'
+    'title'       => 'Admin',
+    'name'        => 'Admin Theme',
+    'description' => 'Bits of Love Admin Theme'
 ];

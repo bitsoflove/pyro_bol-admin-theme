@@ -1,16 +1,21 @@
 <!doctype html>
-
 <html>
+    <head>
+        {% include "theme::partials/metadata" %}
+    </head>
+    <body id="login" style="background-image: url({{ image_path(random(config('bitsoflove.theme.admin::design.backgrounds'))) }})">
 
-<head>
-    {% include "theme::partials/metadata" %}
-</head>
+    <row>
+        <div class="col-lg-14 col-sm-24 left">
+            <div class="logo">
+                <span>Bits of Love</span>
+            </div>
+        </div>
+        <div class="col-lg-10 col-sm-24 right">
+            {{ block('content') }}
+        </div>
+    </row>
 
-<body id="login" style="background-color: #d2d6de">
-
-{{ block('content') }}
-
-{% include "theme::partials/js" %}
-
-</body>
+    {% include "pyrocms.theme.pyrocms::partials/js" %}
+    </body>
 </html>

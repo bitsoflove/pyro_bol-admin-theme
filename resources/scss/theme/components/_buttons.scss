@@ -1,18 +1,12 @@
-.btn {
-    &.btn-xs {
-        font-size: $font-size-xs;
-        padding: $btn-padding-y/2 $btn-padding-x/2;
+body:not(.pyrocms) {
+    .btn {
+        outline: none;
+        border-radius: $border-radius;
     }
-}
-
-.btn-login-outline {
-    @include button-outline-variant(rgba(255, 255, 255, 0.5));
-
-    &:hover {
-        background: rgba(255, 255, 255, 0.1);
+    .btn-secondary-outline {
+        border-color: rgba(0, 0, 0, 0.2);
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
     }
-}
-
-.btn-secondary-outline {
-    //color: $gray-lighter;
 }

@@ -1,10 +1,13 @@
 <section id="footer">
-
     <ul>
         <li class="logo">
-            <a href="https://bitsoflove.be/" target="_blank">
-                Made by Bits of Love
-            </a>
+            <a href="https://www.bitsoflove.be">Made by &hearts; Bits of Love </a>
+        </li>
+        <li class="footprint">
+            {{ request_time() }} <span>|</span> {{ memory_usage() }}
+        </li>
+        <li class="version">
+            {{ config('streams::distribution.version') }}
         </li>
     </ul>
 
@@ -19,7 +22,5 @@
             </select>
         </li>
     </ul>
-
 </section>
-
-{% include "theme::partials/help" %}
+{% include "pyrocms.theme.pyrocms::partials/help" %}

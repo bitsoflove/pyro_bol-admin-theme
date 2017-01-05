@@ -5,18 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="csrf-token" content="{{ csrf_token() }}"/>
 
-<title>{{ config('bitsoflove.theme.admin::settings.application_name') }} &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
+<title>{{ trans('theme::control_panel.title') }} &#8250; {{ trans(template.breadcrumbs.all()|keys|last)|raw }}</title>
 
-
-
-{#{{ asset_add("theme.css", "theme::less/flat-ui/flat-ui.less") }}#}
-{{ asset_add("theme.css", "theme::less/fonts/fonts.less", ["parse"]) }}
-{{ asset_add("styles.css", "theme::scss/theme/theme.scss") }}
-
-{{ asset_add("theme.js", "theme::js/vendor/*") }}
-{{ asset_add("theme.js", "theme::js/libraries/tether.min.js") }}
-{{ asset_add("theme.js", "theme::js/libraries/*") }}
-{{ asset_add("theme.js", "theme::js/theme/*") }}
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}">
+<link rel="apple-touch-icon" type="image/x-icon" href="{{ image_path('theme::img/favicon.png') }}"/>
+{{ asset_add("theme.css", "theme::scss/theme/theme.scss") }}
+{{ asset_add("theme.css", "pyrocms.theme.pyrocms::less/fonts/fonts.less", ["parse"]) }}
+{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/vendor/*") }}
+{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/libraries/tether.min.js") }}
+{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/libraries/*") }}
+{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/theme/*") }}
+{{ asset_add("theme.js", "theme::js/*") }}
 
 {{ asset_style("theme.css") }}
 

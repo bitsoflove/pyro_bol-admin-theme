@@ -1,1 +1,8 @@
-<section id="brand" style='background-image: url("{{ config('bitsoflove.theme.admin::settings.favicon_path') }}mstile-150x150.png")'></section>
+<section id="brand">
+    <div class="logo">
+        <span>{{ trans('theme::control_panel.title') }}</span>
+    </div>
+    <button  data-toggle="push-menu" href="#" class="btn btn-sm toggle pull-right">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+    </button>
+</section>
