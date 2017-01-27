@@ -2,19 +2,19 @@
 <html>
     <head>
         {% block metadata deferred %}
-        {% include "theme::partials/metadata" %}
+        {% include "bitsoflove.theme.admin::partials/metadata" %}
         {% endblock %}
     </head>
 
     <body class="pushing">
         <main id="main">
             <div id="sidebar">
-                {% include "theme::partials/brand" %}
-                {% include "theme::partials/sidebar" %}
+                {% include "bitsoflove.theme.admin::partials/brand" %}
+                {% include "bitsoflove.theme.admin::partials/sidebar" %}
             </div>
             <div id="content">
-                {% include "theme::partials/navbar" %}
-                {% include "theme::partials/header" %}
+                {% include "bitsoflove.theme.admin::partials/navbar" %}
+                {% include "bitsoflove.theme.admin::partials/header" %}
 
                 {% include "pyrocms.theme.pyrocms::partials/banner" %}
                 {% include "pyrocms.theme.pyrocms::partials/breadcrumbs" %}
@@ -23,7 +23,7 @@
                 </div>
                 {{ block('content') }}
             </div>
-            {% include "theme::partials/footer" %}
+            {% include "bitsoflove.theme.admin::partials/footer" %}
         </main>
 
         {% include "pyrocms.theme.pyrocms::partials/modals" %}
