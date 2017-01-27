@@ -17,19 +17,19 @@
         </div>
     </li>
 {% for link_slug in config('websemantics.theme.pyrocms::config.sidebar.sort') %}
-  {% include "theme::partials/link" with {link: template.cp.navigation.get(link_slug)} %}
+  {% include "bitsoflove.theme.admin::partials/link" with {link: template.cp.navigation.get(link_slug)} %}
 {% endfor %}
 {% for link in template.cp.navigation %}
   {% if link.slug not in config('websemantics.theme.pyrocms::config.sidebar.sort') %}
-    {% include "theme::partials/link" %}
+    {% include "bitsoflove.theme.admin::partials/link" %}
   {% endif %}
 {% endfor %}
 </ul>
 <ul class="nav">
     <li>
-        <a href="{{ url('/') }}" class="nav-item" target="_blank"><i class="fa fa-eye"></i> {{ trans('theme::control_panel.view_site') }}</a>
+        <a href="{{ url('/') }}" class="nav-item" target="_blank"><i class="fa fa-eye"></i> {{ trans('bitsoflove.theme.admin::control_panel.view_site') }}</a>
     </li>
     <li>
-        <a href="{{ url('admin/logout') }}" class="nav-item"><i class="fa fa-sign-out"></i> {{ trans('theme::control_panel.logout') }}</a>
+        <a href="{{ url('admin/logout') }}" class="nav-item"><i class="fa fa-sign-out"></i> {{ trans('bitsoflove.theme.admin::control_panel.logout') }}</a>
     </li>
 </ul>
