@@ -1,75 +1,173 @@
 #login {
     height: 100%;
-    padding: 0;
-    margin: 0;
-    background: $login-bg-color;
+    min-width: 0;
+    background-size: 55px 100px;
+    background-color: $gray-lightest;
+
+
+    &.success {
+        .logo-container {
+            left: -50%;
+        }
+
+        .login-container {
+            right: -50%;
+        }
+    }
+
+    .login-container {
+        left: 0;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        transition: right 300ms 500ms;
+
+        background-size: cover;
+        background-position: top, center;
+        background-repeat: no-repeat, no-repeat;
+        .title{
+            margin-bottom: 25px;
+        }
+        .logo {
+            display: none;
+
+            svg {
+                width: 30%;
+
+                fill: #ffffff;
+                margin-top: -30px;
+                vertical-align: middle;
+            }
+        }
+
+        .login-wrapper {
+            margin-top: 40vh;
+
+            input {
+                border: 0;
+                outline: 0;
+                @include border-radius($border-radius);
+            }
+
+            label {
+                color: $gray-dark;
+                margin-top: .35rem;
+            }
+
+            button {
+
+            }
+
+            a {
+                opacity: 0.6;
+                color: $gray-dark;
+                transition: opacity 300ms;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
     .logo {
-        width: 100%;
-        opacity: 0.6;
+        color: #ffffff;
+        font-size: 4rem;
+        margin-top: 40vh;
+        font-weight: bold;
         text-align: center;
+        font-family: 'Montserrat', sans-serif;
+
+        svg {
+            width: 100%;
+
+            margin-top: -30px;
+            vertical-align: middle;
+
+            .st0 {
+                fill: #ffffff;
+            }
+        }
 
         span {
-            color: #fff;
-            font-size: 48px;
-            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: normal;
+            color: rgba(255, 255, 255, 0.2);
         }
     }
-    .left{
-        height:100%;
-        display : flex;
-        justify-content : center;
-        align-items : center;
-    }
-    .right{
-        height:100%;
-        display : flex;
-        justify-content : center;
-        align-items : center;
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-    .header {
-        text-align: center;
-        color: $login-text-color;
-        margin-bottom: 25px;
-    }
-    .logo {
-        opacity: 1;
-        margin-bottom: 0;
-    } 
-    form {
-        label {
-            color: $login-text-color;
-        }
-        .credentials {
-            input {
-                border: 2px solid $login-border-color;
-                &[type="email"] {
-                    border-top-left-radius: 8px;
-                    border-top-right-radius: 8px;
-                    border-bottom-width: 1px;
-                    background-color: rgba(0, 0, 0, 0.2);
-                }
-                &[type="password"] {
-                    border-bottom-left-radius: 8px;
-                    border-bottom-right-radius: 8px;
-                    border-top-width: 1px;
-                    background-color: rgba(0, 0, 0, 0.2);
-                }
+}
+
+@include media-breakpoint-down(md) {
+    #login {
+
+        &.success {
+            .logo-container {
+                left: -100%;
             }
-            i {
-                color: $login-text-color;
+
+            .login-container {
+                right: 100%;
             }
         }
-    }
-    @include media-breakpoint-down(sm) {
-        .left{
-            height: 150px;
+
+        .logo-container {
+            width: 100%;
+
+            &:after {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                content: "";
+                opacity: 0.4;
+                position: absolute;
+                background-size: cover;
+                background-position: top, center;
+                background-repeat: no-repeat, no-repeat;
+                background-image: url('{{ image_path("theme::img/bg.svg") }}');
+            }
+
+            .logo {
+                display: none;
+            }
         }
-        .right{
-            margin-top: 50px;
-            background: transparent;
-            color: $gray-lighter;
-            height: auto;
+
+        .login-container {
+            width: 100%;
+            background: none !important;
+
+            .login-wrapper {
+                margin-top: 20vh;
+            }
+
+            .logo {
+                margin-top: 0;
+                line-height: 1;
+                display: inherit;
+                margin-bottom: 2rem;
+
+                svg {
+                    width: 55px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #login {
+
+        .login-container {
+
+            .login-wrapper {
+                margin-top: 15vh;
+                padding: 0 3rem;
+            }
+
+            .logo {
+                margin-bottom: 4rem;
+            }
         }
     }
 }

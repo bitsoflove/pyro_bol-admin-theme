@@ -1,15 +1,11 @@
 <?php namespace Bitsoflove\AdminTheme;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
+use Pyrocms\AccelerantTheme\AccelerantThemeServiceProvider;
 
-class AdminThemeServiceProvider extends AddonServiceProvider
+class AdminThemeServiceProvider extends AccelerantThemeServiceProvider
 {
-    /**
-     * The class bindings.
-     *
-     * @var array
-     */
-    protected $bindings = [
-        'Anomaly\Streams\Platform\Asset\Asset' => 'Bitsoflove\AdminTheme\Streams\Platform\Asset\Asset',
-    ];
+
+
+
 }

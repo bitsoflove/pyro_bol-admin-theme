@@ -1,32 +1,37 @@
 <!doctype html>
+
 <html>
-    <head>
-        {% block metadata deferred %}
-        {% include "bitsoflove.theme.admin::partials/metadata" %}
-        {% endblock %}
-    </head>
 
-    <body class="pushing">
-        <main id="main">
-            <div id="sidebar">
-                {% include "bitsoflove.theme.admin::partials/brand" %}
-                {% include "bitsoflove.theme.admin::partials/sidebar" %}
-            </div>
-            <div id="content">
-                {% include "bitsoflove.theme.admin::partials/navbar" %}
-                {% include "bitsoflove.theme.admin::partials/header" %}
+<head>
+    {% block metadata deferred %}
+    {% include "bitsoflove.theme.admin::partials/metadata" %}
+    {% endblock %}
+</head>
 
-                {% include "pyrocms.theme.pyrocms::partials/banner" %}
-                {% include "pyrocms.theme.pyrocms::partials/breadcrumbs" %}
-                <div class="container-fluid">
-                    {% include "pyrocms.theme.pyrocms::partials/messages" %}
-                </div>
-                {{ block('content') }}
-            </div>
-            {% include "bitsoflove.theme.admin::partials/footer" %}
-        </main>
+<body class="variant-{{ random(8) }} expand" data-variants="8">
 
-        {% include "pyrocms.theme.pyrocms::partials/modals" %}
-        {% include "pyrocms.theme.pyrocms::partials/js" %}
-    </body>
+<section id="app">
+
+    {% include "bitsoflove.theme.admin::partials/topbar" %}
+    {% include "bitsoflove.theme.admin::partials/sidebar" %}
+
+    <main id="main">
+
+        {{ breadcrumb() }}
+
+        <div class="container-fluid">
+            {% include "bitsoflove.theme.admin::partials/messages" %}
+            {% include "bitsoflove.theme.admin::partials/buttons" %}
+        </div>
+
+        {% block content %}{% endblock %}
+
+    </main>
+</section>
+
+{% include "bitsoflove.theme.admin::partials/footer" %}
+{% include "bitsoflove.theme.admin::partials/modals" %}
+{% include "bitsoflove.theme.admin::partials/js" %}
+
+</body>
 </html>

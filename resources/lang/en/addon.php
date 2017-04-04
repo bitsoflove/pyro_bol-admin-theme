@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title'       => 'Admin',
-    'name'        => 'Admin Theme',
-    'description' => 'Bits of Love Admin Theme'
+    'title'       => 'Accelerant',
+    'name'        => 'Accelerant Theme',
+    'description' => 'The official admin theme for PyroCMS.',
 ];

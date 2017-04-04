@@ -1,19 +1,12 @@
 {
     "name": "bitsoflove/admin-theme",
     "type": "streams-addon",
-    "description": "",
     "autoload": {
         "psr-4": {
             "Bitsoflove\\AdminTheme\\": "src/"
         }
     },
-    "keywords": ["pyro","theme"],
-    "homepage": "https://github.com/bitsoflove/pyro_bol-admin-theme",
-    "authors": [
-        {
-            "name": "Bits of Love",
-            "email": "doctorlove@bitsoflove.be",
-            "role": "Developer"
-        }
-    ]
+    "require": {
+        "pyrocms/accelerant-theme": "~1.0.0",
+    }
 }

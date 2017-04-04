@@ -1,42 +1,61 @@
-{% extends "bitsoflove.theme.admin::layouts/login" %}
+{% extends "pyrocms.theme.accelerant::layouts/login" %}
 
 {% block content %}
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-24">
-                <h2 class="header">
-                   Login to your account
-                </h2>
-                {% include "pyrocms.theme.pyrocms::partials/messages" %}
+    <div class="login-container">
+        <div class="login-wrapper container-fluid">
 
-                {{ form_open({'method': 'post'}) }}
+            <div class="logo">
+                {{ img('theme::img/icon.svg').data|raw }}
 
-                <div class="form-group credentials">
+            </div>
 
+            <div class="col-sm-12 offset-sm-6">
+                <h2 class="title">Bits of love cms</h2>
+                {% include "theme::partials/messages" %}
+
+                {% set form = form('login').redirect('admin').get() %}
+
+
+
+                {{ form.open|raw }}
+
+                <div class="form-group">
                     {% if setting_value('anomaly.module.users::login') == 'username' %}
-                        {{ form_text("username", null, {'class': 'form-control', 'placeholder': 'Username'}) }}{{ icon('user') }}
+                        {{ form.fields.username.setPlaceholder(form.fields.username.label).input_name|raw }}
                     {% else %}
-                        {{ form_email("email", null, {'class': 'form-control', 'placeholder': 'Email'}) }}{{ icon('envelope') }}
+                        {{ form.fields.email.setPlaceholder(form.fields.email.label).input|raw }}
                     {% endif %}
-
-                    {{ form_password('password', {'class': 'form-control', 'placeholder': 'Password'}) }}{{ icon('locked') }}
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" value="Login" class="btn btn-success btn-block">
-                        {{ trans('anomaly.module.users::button.login') }}
-                    </button>
+                    {{ form.fields.password.setPlaceholder(form.fields.password.label).input|raw }}
                 </div>
 
-                <div class="form-group checkbox">
+                <div class="form-group checkbox pull-left">
                     <label>
                         {{ form_checkbox("remember", null, false, {'id': 'remember'}) }}
                         {{ trans('anomaly.module.users::field.remember_me.name') }}
                     </label>
                 </div>
 
-                {{ form_close() }}
+                <div class="form-group pull-right">
+                    <button type="submit" value="Login" class="btn btn-primary"
+                            onclick="$('body').addClass('success');">
+                        {{ trans('anomaly.module.users::button.login') }}
+                    </button>
+                </div>
+
+                {{ form.close|raw }}
+
+                <div class="clearfix"></div>
+
+                <a href="{{ url_route('anomaly.module.users::password.forgot') }}">
+                    <small>
+                        {{ trans('anomaly.module.users::message.forgot_password') }}
+                    </small>
+                </a>
+
             </div>
         </div>
     </div>
