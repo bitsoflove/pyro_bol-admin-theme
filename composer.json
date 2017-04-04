@@ -7,6 +7,6 @@
         }
     },
     "require": {
-        "pyrocms/accelerant-theme": "~1.0.0",
+        "pyrocms/accelerant-theme": "~1.0.0"
     }
 }
