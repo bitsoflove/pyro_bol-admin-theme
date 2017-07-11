@@ -10,41 +10,41 @@
 
 // 3- Official PyroCMS Theme & Bootstrap Imports
 // Bootstrap base styles
-@import "pyrocms/pyrocms-theme/resources/scss/bootstrap/bootstrap";
+@import "../bootstrap/bootstrap";
 // Utilities
-@import "pyrocms/pyrocms-theme/resources/scss/theme/mixins";
+
 // Layout
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/menu";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/push";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/brand";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/banner";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/navbar";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/header";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/footer";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/buttons";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/sections";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/layout/navigation";
+@import "layout/menu";
+@import "layout/push";
+@import "layout/brand";
+@import "layout/banner";
+@import "layout/navbar";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/buttons";
+@import "layout/sections";
+@import "layout/navigation";
 // Components
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/nav";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/type";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/cards";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/forms";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/trees";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/loader";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/modals";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/tables";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/animate";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/buttons";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/progress";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/utilities";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/breadcrumb";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/pagination";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/input-group";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/scaffolding";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/components/custom-forms";
+@import "components/nav";
+@import "components/type";
+@import "components/cards";
+@import "components/forms";
+@import "components/trees";
+@import "components/loader";
+@import "components/modals";
+@import "components/tables";
+@import "components/animate";
+@import "components/buttons";
+@import "components/progress";
+@import "components/utilities";
+@import "components/breadcrumb";
+@import "components/pagination";
+@import "components/input-group";
+@import "components/scaffolding";
+@import "components/custom-forms";
 // Special Pages
-@import "pyrocms/pyrocms-theme/resources/scss/theme/pages/login";
-@import "pyrocms/pyrocms-theme/resources/scss/theme/pages/installer";
+@import "pages/login";
+
 
 // 4- PyroCMS Plus Theme Imports
 // Layout

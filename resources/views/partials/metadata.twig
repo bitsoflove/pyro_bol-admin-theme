@@ -13,11 +13,11 @@
 <link rel="apple-touch-icon" type="image/x-icon" href="{{ image_path('bitsoflove.theme.admin::img/favicon.png') }}"/>
 {{ asset_add("theme.css", "bitsoflove.theme.admin::scss/theme/theme.scss") }}
 {{ asset_add("theme.css", "pyrocms.theme.pyrocms::less/fonts/fonts.less", ["parse"]) }}
-{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/vendor/*") }}
-{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/libraries/tether.min.js") }}
-{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/libraries/*") }}
-{{ asset_add("theme.js", "pyrocms.theme.pyrocms::js/theme/*") }}
-{{ asset_add("theme.js", "bitsoflove.theme.admin::js/*") }}
+{{ asset_add("theme.js", "theme::js/vendor/*") }}
+{{ asset_add("theme.js", "theme::js/libraries/tether.min.js") }}
+{{ asset_add("theme.js", "theme::js/libraries/*") }}
+{{ asset_add("theme.js", "theme::js/theme/*") }}
+{{ asset_add("theme.js", "bitsoflove.theme.admin::js/sidebar.js") }}
 
 {{ asset_style("theme.css") }}
 
