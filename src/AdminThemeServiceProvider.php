@@ -5,5 +5,4 @@ use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 class AdminThemeServiceProvider extends AddonServiceProvider
 {
     
-
 }
