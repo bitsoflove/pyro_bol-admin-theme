@@ -9,7 +9,5 @@ class AdminThemeServiceProvider extends AddonServiceProvider
      *
      * @var array
      */
-    protected $bindings = [
-        'Anomaly\Streams\Platform\Asset\Asset' => 'Bitsoflove\AdminTheme\Streams\Platform\Asset\Asset',
-    ];
+
 }

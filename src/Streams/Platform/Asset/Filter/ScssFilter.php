@@ -28,7 +28,7 @@ class ScssFilter extends \Anomaly\Streams\Platform\Asset\Filter\ScssFilter
     /* Make 'core' & the active 'skin' folders avilable for @imports */
     $this->importPaths = [base_path('core')];
 
-    parent::__construct($parser);
+    //parent::__construct($parser);
   }
 
   /**
